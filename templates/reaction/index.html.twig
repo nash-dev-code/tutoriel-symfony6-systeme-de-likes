@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Liked by : </h1>
+        {% for user in users %}
+            <span>{{ user.author.email }}</span><br>
+            {% else %}
+            no like yet
+        {% endfor %}
+    </div>
+{% endblock %}
